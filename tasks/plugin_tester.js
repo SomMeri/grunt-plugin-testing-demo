@@ -2,11 +2,11 @@
 
 module.exports = function(grunt) {
 
-  grunt.registerMultiTask('plugin_tester', 'Testing grunt plugins from inside grunt.', function() {
+  grunt.registerMultiTask('plugin_tester', 'Demo grunt task.', function() {
     //merge supplied options with default options
     var options = this.options({ action: 'pass', message: 'unknown error'});
 
-    //pass or fail - depending on what is needed
+    //pass or fail - depending on configured options
     if (options.action==='pass') {
       grunt.log.writeln('Plugin worked correctly.');
     } else {
